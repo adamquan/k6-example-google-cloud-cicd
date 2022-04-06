@@ -1,4 +1,7 @@
 steps:
-# Load Test
-- name: 'gcr.io/$PROJECT_ID/docker-compose'
-  args: ['run', 'k6']
+  - name: gcr.io/$PROJECT_ID/docker-compose
+    env:
+      - 'K6_CLOUD_TOKEN=c448b2bef030aa7a5327423f7928501a21432497055c881883e2fd100cf30a39'
+    args:
+      - run
+      - k6
